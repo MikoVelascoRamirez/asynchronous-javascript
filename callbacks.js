@@ -15,10 +15,6 @@ function addPerson(person, source, callback){
     console.log("La función terminó de ejecutarse")
 }
 
-/*addPerson({id: 4, name:"post 4", description: "desc of post 4"}, diary, () => {
-    console.log("ejecutando callback")
-});*/
-
 const exporting = {
     addPerson
 }
