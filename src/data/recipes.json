@@ -1,0 +1,72 @@
+[
+    {
+        "name": "fresas con crema",
+        "ingredients":[
+            {
+                "name" : "fresas",
+                "cantidad" : 250,
+                "medida" : "gramos"
+            },
+            {
+                "name" : "crema de chantilly",
+                "cantidad" : 500,
+                "medida" : "gramos"
+            }
+        ]
+    },
+    {
+        "name": "mayonesa veggie",
+        "ingredients":[
+            {
+                "name" : "tofu",
+                "cantidad" : 500,
+                "medida" : "gramos"
+            },
+            {
+                "name" : "vinagre",
+                "cantidad" : 1,
+                "medida" : "cucharada"
+            },
+            {
+                "name": "mostaza",
+                "cantidad": 1,
+                "medida": "cucharada"
+            },
+            {
+                "name": "jugo de limón",
+                "cantidad": 2,
+                "medida": "medios limones"
+            }
+        ]
+    },
+    {
+        "name": "licuado de avena mañanero",
+        "ingredients":[
+            {
+                "name": "avena",
+                "cantidad": 1,
+                "medida" : "taza"
+            },
+            {
+                "name": "amaranto",
+                "cantidad": 0.5,
+                "medida" : "taza"
+            },
+            {
+                "name": "banana",
+                "cantidad": 0.5,
+                "medida" : "pieza"
+            },
+            {
+                "name": "zarzamora",
+                "cantidad": 2,
+                "medida" : "cucharada"
+            },
+            {
+                "name": "agua",
+                "cantidad": 500,
+                "medida" : "mililitros"
+            }
+        ]
+    }
+]
