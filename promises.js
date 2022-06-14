@@ -2,16 +2,22 @@ const fileModule = require('fs');
 const data = JSON.parse(fileModule.readFileSync('src/data/recipes.json'));
 
 function addRecipe(recipe, srcData){
-    return new Promise( (reject, resolve) => {
+    return new Promise( (resolve, reject) => {
         setTimeout(() => {
-            const recipes = srcData;
+            const recipes = srcData;            
             recipes.push(recipe);
-            fileModule.writeFileSync('src/data/recipes.json', JSON.stringify(recipes, null, 4), err => {
-                if(err) reject(err)
-                else resolve(data);
-            })
+            fileModule.writeFileSync('src/data/recipes.json', JSON.stringify(recipes, null, 4))
+            
+            const wasPushed = srcData.some(eachRecipe => eachRecipe.name === recipe.name);
+            
+            if(wasPushed) resolve(srcData)
+            else reject(err)
         }, 2000)
     })
 }
 
-module.exports = addRecipe;
+const exporting = {
+    addRecipe
+}
+
+module.exports = exporting;
