@@ -10,14 +10,22 @@ function addRecipe(recipe, srcData){
             
             const wasPushed = srcData.some(eachRecipe => eachRecipe.name === recipe.name);
             
-            if(wasPushed) resolve(srcData)
+            if(wasPushed) resolve(getData(srcData))
             else reject(err)
         }, 2000)
     })
 }
 
+function getData(src){
+    return src.map( recipe => {
+        const {name, ingredients} = recipe;
+        return { name, numOfIngredients : ingredients.length }
+    })
+}
+
 const exporting = {
-    addRecipe
+    addRecipe,
+    getData
 }
 
 module.exports = exporting;
