@@ -35,4 +35,22 @@ describe("Testing promises...", () => {
             
         jest.advanceTimersByTime(3000);
     });
+
+    test("3. Checking if data is structured", () => {
+        const recipes = [
+            {"name": "french potatoes", "ingredients": ["potato", "garlic", "salt"]},
+            {"name": "breaded eggplants", "ingredients": ["eggplants", "bread crumbs"]},
+            {"name": "hamburguer", "ingredients": ["meat", "tomato", "cheese", "onion", "pickles", "ketchup", "mustard", "lettuce", "mayo"]},
+        ]
+
+        const data = recipe.getData(recipes)
+        expect.assertions(1);
+        
+        expect(data).toEqual(expect.arrayContaining([
+            {name: "french potatoes", numOfIngredients: 3},
+            {name: "breaded eggplants", numOfIngredients: 2},
+            {name: "hamburguer", numOfIngredients: 9}
+        ]))
+        
+    })
 });
